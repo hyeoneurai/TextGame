@@ -101,7 +101,7 @@ namespace TextGame
                 Console.Write("]");
                 Console.Write(PadRightForMixedText(Name, 9));
             }
-            else Console.Write(PadRightForMixedText(Name, 12));
+            else Console.Write(PadRightForMixedText(Name, 20));
             Console.Write(" | ");
 
             if (Atk != 0) Console.Write($"Atk {(Atk >= 0 ? "+ " + Atk : "")}");
@@ -358,6 +358,7 @@ namespace TextGame
                     break;
                 default:
                     BuyItem(keyinput - 1);
+                    ShopBuyMenu();
                     break;
             }
 
